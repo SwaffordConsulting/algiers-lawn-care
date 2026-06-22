@@ -404,7 +404,7 @@ export default function App() {
             </div>
             <div style={{textAlign:"center"}}>
               <div style={{color:C.white,fontWeight:900,fontSize:"0.95rem",letterSpacing:"0.04em",textTransform:"uppercase"}}>Algiers Lawn Care</div>
-              <div style={{color:C.green,fontSize:"0.65rem",letterSpacing:"0.06em",fontWeight:700,textTransform:"uppercase"}}>Eric Landry Jr.</div>
+              <a href="https://www.instagram.com/algierslawncare" target="_blank" rel="noreferrer" style={{color:C.green,fontSize:"0.65rem",letterSpacing:"0.06em",fontWeight:700,textTransform:"uppercase",textDecoration:"none"}}>@algierslawncare ↗</a>
             </div>
           </div>
           <div style={{color:"#9ca3af",fontSize:"0.68rem",fontWeight:600,letterSpacing:"0.08em",textTransform:"uppercase",marginTop:"0.3rem",textAlign:"center"}}>
@@ -435,7 +435,7 @@ export default function App() {
         {view==="landing" && (
           <>
             
-            <div style={{position:"relative",width:"100%",height:"420px",overflow:"hidden",marginBottom:"1.5rem",borderRadius:"0 0 12px 12px",backgroundImage:"url(https://i.imgur.com/oKxVUus.jpeg)",backgroundSize:"cover",backgroundPosition:"center"}}>
+            <div style={{position:"relative",width:"100%",height:"420px",overflow:"hidden",marginBottom:"1.5rem",borderRadius:"0 0 12px 12px",background:C.black}}>
               <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.72) 100%)"}} />
               <div style={{position:"absolute",inset:0,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",textAlign:"center",padding:"1.5rem"}}>
                 <div style={{display:"inline-block",background:C.green,borderRadius:4,padding:"0.25rem 0.85rem",fontSize:"0.7rem",fontWeight:800,color:C.white,letterSpacing:"0.12em",textTransform:"uppercase",marginBottom:"1rem"}}>
@@ -482,20 +482,7 @@ export default function App() {
               ))}
             </div>
 
-            {/* About Eric — split layout with photo */}
-            <div style={{background:C.black,borderRadius:10,overflow:"hidden",marginBottom:"1.5rem",display:"flex",alignItems:"stretch"}}>
-              {/* Photo left */}
-              <div style={{width:"42%",flexShrink:0,backgroundImage:"url(https://i.postimg.cc/CL4W8Q2S/Screenshot-(17).png)",backgroundSize:"cover",backgroundPosition:"center top",minHeight:200}} />
-              {/* Text right */}
-              <div style={{padding:"1.25rem 1.1rem",flex:1}}>
-                <p style={{margin:"0 0 0.4rem",fontSize:"0.68rem",fontWeight:800,letterSpacing:"0.12em",textTransform:"uppercase",color:C.green}}>About</p>
-                <p style={{margin:"0 0 0.5rem",color:C.white,fontWeight:900,fontSize:"1rem",lineHeight:1.2}}>Eric Landry Jr.</p>
-                <div style={{width:24,height:2,background:C.green,borderRadius:1,marginBottom:"0.65rem"}} />
-                <p style={{margin:0,color:"#d1d5db",fontSize:"0.82rem",lineHeight:1.8}}>
-                  Born and raised in Algiers. O. Perry Walker graduate. Competitive bodybuilder. No shortcuts. No excuses. Just results — in the gym and in your yard.
-                </p>
-              </div>
-            </div>
+
 
             {/* Stats */}
             <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:8,marginBottom:"1.75rem"}}>
