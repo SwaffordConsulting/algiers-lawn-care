@@ -214,11 +214,26 @@ function IntakeForm() {
           </div>
 
           <div>
-            <label style={lbl}>Service Needed</label>
-            <select style={inp} value={form.service} onChange={e=>set("service",e.target.value)}>
-              <option value="">Select one...</option>
-              {SERVICES.map(s=><option key={s}>{s}</option>)}
-            </select>
+            <label style={lbl}>Services Needed (select all that apply)</label>
+            <div style={{border:`1.5px solid ${C.rule}`,borderRadius:6,background:C.white,overflow:"hidden"}}>
+              {SERVICES.map(s=>{
+                const selected = (form.service||"").split(",").map(x=>x.trim()).filter(Boolean).includes(s);
+                return (
+                  <div key={s}
+                    onClick={()=>{
+                      const current = (form.service||"").split(",").map(x=>x.trim()).filter(Boolean);
+                      const updated = selected ? current.filter(x=>x!==s) : [...current,s];
+                      set("service", updated.join(", "));
+                    }}
+                    style={{display:"flex",alignItems:"center",gap:"0.75rem",padding:"0.65rem 1rem",cursor:"pointer",background:selected?"#e8f7ea":C.white,borderBottom:`1px solid ${C.rule}`,transition:"background 0.15s"}}>
+                    <div style={{width:18,height:18,borderRadius:4,border:`2px solid ${selected?C.green:C.rule}`,background:selected?C.green:"transparent",flexShrink:0,display:"flex",alignItems:"center",justifyContent:"center",transition:"all 0.15s"}}>
+                      {selected && <span style={{color:C.white,fontSize:"0.7rem",fontWeight:900}}>✓</span>}
+                    </div>
+                    <span style={{fontSize:"0.9rem",color:C.black,fontWeight:selected?700:400}}>{s}</span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           <div>
@@ -259,7 +274,7 @@ function IntakeForm() {
 
           <div style={{display:"flex",justifyContent:"space-between"}}>
             <button style={btn(false)} onClick={()=>setStep(1)}>← Back</button>
-            <button style={{...btn(true),opacity:!form.service?0.5:1}} onClick={()=>{if(form.service)setStep(3);}}>Continue →</button>
+            <button style={{...btn(true),opacity:!form.service?0.5:1}} onClick={()=>{if(form.service&&form.service.trim())setStep(3);}}>Continue →</button>
           </div>
         </div>
       )}
