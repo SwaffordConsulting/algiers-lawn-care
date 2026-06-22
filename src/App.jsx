@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const C = {
   green:     "#31A73B",
@@ -385,6 +385,14 @@ function Dashboard({onBack}) {
 export default function App() {
   const [view, setView] = useState("landing");
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.async = true;
+    document.head.appendChild(script);
+    return () => { document.head.removeChild(script); };
+  }, []);
+
   const collection = [
     { icon:"🪖", name:"General Meyer Military Cut", type:"Precision Lawn Service", items:["Sharp mowing patterns","Clean edging","Grass clipping removal","Professional finish"], quote:"Inspection-ready every time.", tag:"Precise. Sharp. Clean. No Frags." },
     { icon:"⚓", name:"Algiers Pointee", type:"Edges & Trimming Detail Service", items:["Sidewalk edging","Driveway edging","Tree ring cleanup","Shrub & perimeter trimming"], quote:"Where the details make the difference.", tag:"" },
@@ -492,6 +500,16 @@ export default function App() {
                   <div style={{fontSize:"0.7rem",color:C.gray,fontWeight:700,marginTop:"0.25rem",textTransform:"uppercase",letterSpacing:"0.06em"}}>{s.label}</div>
                 </div>
               ))}
+            </div>
+
+            {/* Instagram Feed */}
+            <div style={{marginBottom:"1.75rem"}}>
+              <div style={{textAlign:"center",marginBottom:"1rem"}}>
+                <p style={{fontSize:"0.72rem",fontWeight:800,letterSpacing:"0.14em",textTransform:"uppercase",color:C.gray,marginBottom:"0.3rem"}}>Follow the Work</p>
+                <div style={{fontSize:"1.2rem",fontWeight:900,color:C.black,letterSpacing:"0.03em",textTransform:"uppercase"}}>@algierslawncare</div>
+                <div style={{width:40,height:3,background:C.green,borderRadius:2,margin:"0.5rem auto 0"}} />
+              </div>
+              <div className="elfsight-app-3b5a0b70-81eb-4025-b995-94481a979e47" data-elfsight-app-lazy />
             </div>
 
             {/* CTA */}
