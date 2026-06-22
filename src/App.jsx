@@ -14,7 +14,7 @@ const C = {
 };
 
 const FORMSPREE_URL = "https://formspree.io/f/xqeobpnq";
-const CALENDLY_URL  = "https://calendly.com/gregory-cultureofcleanliness/ai-consulting-discovery-call";
+const CALENDLY_URL  = "https://calendly.com/gregory-cultureofcleanliness/new-meeting";
 const PHONE         = "504-333-2472";
 const YT_VIDEO_ID   = "lKQ3jjZC0TQ";
 
