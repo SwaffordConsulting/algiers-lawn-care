@@ -399,8 +399,8 @@ export default function App() {
       <nav style={{background:C.black,padding:"0.85rem 1.25rem 0.6rem",display:"flex",alignItems:"flex-start",justifyContent:"space-between"}}>
         <div style={{display:"flex",flexDirection:"column",alignItems:"center",flex:1}}>
           <div style={{display:"flex",alignItems:"center",gap:"0.65rem",justifyContent:"center"}}>
-            <div style={{width:38,height:38,borderRadius:"50%",overflow:"hidden",border:`2px solid ${C.green}`,flexShrink:0,background:"#333",display:"flex",alignItems:"center",justifyContent:"center"}}>
-              <span style={{fontSize:"1.1rem"}}>🌿</span>
+            <div style={{width:38,height:38,borderRadius:6,background:C.green,flexShrink:0,display:"flex",alignItems:"center",justifyContent:"center",fontWeight:900,color:C.black,fontSize:"0.85rem",letterSpacing:"-0.5px"}}>
+              EL
             </div>
             <div style={{textAlign:"center"}}>
               <div style={{color:C.white,fontWeight:900,fontSize:"0.95rem",letterSpacing:"0.04em",textTransform:"uppercase"}}>Algiers Lawn Care</div>
@@ -435,7 +435,14 @@ export default function App() {
         {view==="landing" && (
           <>
             
-            <div style={{position:"relative",width:"100%",height:"420px",overflow:"hidden",marginBottom:"1.5rem",borderRadius:"0 0 12px 12px",backgroundImage:"url(https://i.imgur.com/oKxVUus.jpeg)",backgroundSize:"cover",backgroundPosition:"center top"}}>
+            {/* VIDEO HERO */}
+            <div style={{position:"relative",width:"100%",height:"420px",overflow:"hidden",marginBottom:"1.5rem",borderRadius:"0 0 12px 12px"}}>
+              <iframe
+                src="https://www.youtube.com/embed/lKQ3jjZC0TQ?autoplay=1&mute=1&loop=1&playlist=lKQ3jjZC0TQ&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+                style={{position:"absolute",top:"50%",left:"50%",transform:"translate(-50%,-50%)",width:"177.78vh",minWidth:"100%",height:"56.25vw",minHeight:"100%",border:"none",pointerEvents:"none"}}
+                allow="autoplay; encrypted-media"
+                title="Algiers Lawn Care"
+              />
               <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.72) 100%)"}} />
               <div style={{position:"absolute",inset:0,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",textAlign:"center",padding:"1.5rem"}}>
                 <div style={{display:"inline-block",background:C.green,borderRadius:4,padding:"0.25rem 0.85rem",fontSize:"0.7rem",fontWeight:800,color:C.white,letterSpacing:"0.12em",textTransform:"uppercase",marginBottom:"1rem"}}>
