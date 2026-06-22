@@ -482,12 +482,19 @@ export default function App() {
               ))}
             </div>
 
-            {/* About */}
-            <div style={{background:C.black,borderRadius:10,padding:"1.4rem",marginBottom:"1.5rem"}}>
-              <p style={{margin:"0 0 0.6rem",fontSize:"0.72rem",fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",color:C.green}}>About Eric Landry Jr.</p>
-              <p style={{margin:0,color:"#d1d5db",fontSize:"0.9rem",lineHeight:1.85}}>
-                Born and raised in Algiers. O. Perry Walker graduate. Competitive bodybuilder. Eric built this business the same way he built himself — through discipline, no shortcuts, and zero excuses. When he says he'll be there, he's there. When he says it'll be done right, it's done right.
-              </p>
+            {/* About Eric — split layout with photo */}
+            <div style={{background:C.black,borderRadius:10,overflow:"hidden",marginBottom:"1.5rem",display:"flex",alignItems:"stretch"}}>
+              {/* Photo left */}
+              <div style={{width:"42%",flexShrink:0,backgroundImage:"url(https://i.postimg.cc/CL4W8Q2S/Screenshot-(17).png)",backgroundSize:"cover",backgroundPosition:"center top",minHeight:200}} />
+              {/* Text right */}
+              <div style={{padding:"1.25rem 1.1rem",flex:1}}>
+                <p style={{margin:"0 0 0.4rem",fontSize:"0.68rem",fontWeight:800,letterSpacing:"0.12em",textTransform:"uppercase",color:C.green}}>About</p>
+                <p style={{margin:"0 0 0.5rem",color:C.white,fontWeight:900,fontSize:"1rem",lineHeight:1.2}}>Eric Landry Jr.</p>
+                <div style={{width:24,height:2,background:C.green,borderRadius:1,marginBottom:"0.65rem"}} />
+                <p style={{margin:0,color:"#d1d5db",fontSize:"0.82rem",lineHeight:1.8}}>
+                  Born and raised in Algiers. O. Perry Walker graduate. Competitive bodybuilder. No shortcuts. No excuses. Just results — in the gym and in your yard.
+                </p>
+              </div>
             </div>
 
             {/* Stats */}
